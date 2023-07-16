@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texterly Ai</title>
+
+     <!-- Font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- JavaScript -->
+    <script src="./index.js" type="module"></script>
+</head>
+
+<body>
+    <h1>Texterly</h1>
+    <h3 id="error">😣Unable to process your request😣</h3>
+    <form action="/submit" method="post">
+        <textarea name="textarea" required></textarea>
+        <div id="spinner" class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="copy-text">
+            <img src="./copy-icon.svg" alt="">
+            Copy
+        </div>
+        <footer>
+            <input type="submit" value="Process">
+            <div class="characters">
+                <p>Characters</p>
+                <p id="characters">0</p>
+            </div>
+            <div class="words">
+                <p>Words</p>
+                <p id="words">0</p>
+            </div>
+        </footer>
+    </form>
+    <div class="cover"></div>
+</body>
+
+</html>
+

@@ -1,0 +1,288 @@
+/* Setting */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif Gujarati', serif;
+    padding: 0;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.6;
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(147, 139, 139, .5);
+    display: none;
+}
+
+.image-full {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+p {
+    font-weight: 400;
+    margin: 0;
+    margin-top: 0.5em;
+    line-height: 1.4;
+}
+
+.strong {
+    font-weight: 400;
+}
+
+.less-strong {
+    font-weight: 600;
+}
+
+.mag-side {
+    padding: .5em;
+}
+
+/* main */
+h1 {
+    font-size: 4.375rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    color: red;
+    display: none;
+}
+
+form {
+    position: relative;
+}
+
+form textarea {
+    resize: vertical;
+    display: block;
+    width: 100%;
+    min-height: 16rem;
+    background-color: #ffe7e5;
+    border: 2px #ffe7e5 solid;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-radius: 5px; 
+}
+
+form textarea:focus {
+    outline: none;
+    border-color: pink;
+}
+
+form input[type="submit"] {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #87DF9A;
+    border: transparent;
+    border-radius: .9375rem;
+    cursor: pointer;
+    padding: 1.5rem;
+    transition: all .3s;
+    flex-grow: 1.5;
+    height: 100%;
+}
+
+form input[type="submit"]:hover {
+    color: white;
+    background-color: #ff97ba;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-top: 1rem;
+}
+
+footer div {
+    border-radius: 0.9375rem;
+    background: #FFC997;
+    display: inline-block;
+    border: 1px solid #FFC997;
+    text-align: center;
+    flex-grow: 1;
+    padding: .5rem;
+}
+
+footer div p:first-of-type {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+footer div p:last-of-type {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* copy */
+.copy-text {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 0.7rem;
+    background: #FCFCFC;
+    padding: .3rem .5rem;
+    text-align: center;
+    display: flex;
+    align-items: self-start;
+    gap: .3rem;
+    cursor: pointer;
+}
+
+/* ------------spinner----------- */
+
+.spinner {
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    z-index: 20;
+    display: none;
+}
+
+.spinner div {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: spinner 1.2s linear infinite;
+}
+
+.spinner div:nth-child(1) {
+    animation-delay: 0s;
+    top: 37px;
+    left: 66px;
+}
+
+.spinner div:nth-child(2) {
+    animation-delay: -0.1s;
+    top: 22px;
+    left: 62px;
+}
+
+.spinner div:nth-child(3) {
+    animation-delay: -0.2s;
+    top: 11px;
+    left: 52px;
+}
+
+.spinner div:nth-child(4) {
+    animation-delay: -0.3s;
+    top: 7px;
+    left: 37px;
+}
+
+.spinner div:nth-child(5) {
+    animation-delay: -0.4s;
+    top: 11px;
+    left: 22px;
+}
+
+.spinner div:nth-child(6) {
+    animation-delay: -0.5s;
+    top: 22px;
+    left: 11px;
+}
+
+.spinner div:nth-child(7) {
+    animation-delay: -0.6s;
+    top: 37px;
+    left: 7px;
+}
+
+.spinner div:nth-child(8) {
+    animation-delay: -0.7s;
+    top: 52px;
+    left: 11px;
+}
+
+.spinner div:nth-child(9) {
+    animation-delay: -0.8s;
+    top: 62px;
+    left: 22px;
+}
+
+.spinner div:nth-child(10) {
+    animation-delay: -0.9s;
+    top: 66px;
+    left: 37px;
+}
+
+.spinner div:nth-child(11) {
+    animation-delay: -1s;
+    top: 62px;
+    left: 52px;
+}
+
+.spinner div:nth-child(12) {
+    animation-delay: -1.1s;
+    top: 52px;
+    left: 62px;
+}
+
+@keyframes spinner {
+    0%, 20%, 80%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 700px){
+    footer{
+        flex-direction: column;
+    }
+    
+    footer div{
+        width: 100%;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+    }
+    h1{
+        font-size: 3rem;
+    }
+}
